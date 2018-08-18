@@ -54,7 +54,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BulletPrefab: {fileID: 1947569953174578, guid: 7b33b381d827b2e489677a05388b771e,
     type: 2}
-  FiringDelay: 45
+  BulletsPerSecond: 1.25
+  BulletDamageAcceleration: 0.2
 --- !u!212 &212965445999251822
 SpriteRenderer:
   m_ObjectHideFlags: 1

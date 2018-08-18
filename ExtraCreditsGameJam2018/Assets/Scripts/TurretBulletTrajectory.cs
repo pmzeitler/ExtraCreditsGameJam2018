@@ -5,6 +5,8 @@ using UnityEngine;
 public class TurretBulletTrajectory : MonoBehaviour {
     public float SpeedPerFrame = 3.0f;
 
+    public GameObject firingTurret;
+
 	// Use this for initialization
 	void Start () {
 		

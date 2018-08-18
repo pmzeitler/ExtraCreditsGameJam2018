@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour {
     public int MaxTurrets = 5;
     public GameObject TurretPrefab;
 
-    public bool CanPlaceTurrets = true;
+    private MissileSpawner spawner;
 
     private int _turretsPlaced = 0;
     private bool _turretKeyDown = false;
@@ -17,9 +17,14 @@ public class PlayerController : MonoBehaviour {
 	void Start () {
         _turretsPlaced = 0;
 	}
-	
-	// Update is called once per frame
-	void Update () {
+
+    private void Awake()
+    {
+        spawner = FindObjectOfType<MissileSpawner>();
+    }
+
+    // Update is called once per frame
+    void Update () {
         //check movement
         Vector3 movement = new Vector3(0, 0, 0);
 		if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
@@ -33,22 +38,26 @@ public class PlayerController : MonoBehaviour {
         }
         gameObject.transform.position += movement;
 
-        //check for a turret to be placed
-        if (Input.GetKey(KeyCode.Space))
+
+        if (spawner.StartTimeRemaining >= 0)
         {
-            if (_turretsPlaced < MaxTurrets)
+            //check for a turret to be placed
+            if (Input.GetKey(KeyCode.Space))
             {
-                if(!_turretKeyDown)
+                if (_turretsPlaced < MaxTurrets)
                 {
-                    _turretKeyDown = true;
-                    Instantiate(TurretPrefab, gameObject.transform.position, Quaternion.identity);
-                    _turretsPlaced++;
+                    if (!_turretKeyDown)
+                    {
+                        _turretKeyDown = true;
+                        Instantiate(TurretPrefab, gameObject.transform.position, Quaternion.identity);
+                        _turretsPlaced++;
+                    }
                 }
             }
-        }
-        else
-        {
-            _turretKeyDown = false;
+            else
+            {
+                _turretKeyDown = false;
+            }
         }
     }
 }

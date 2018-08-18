@@ -405,6 +405,7 @@ MonoBehaviour:
   StartingDelaySeconds: 10
   MissilesPerSecond: 3
   MissileAcceleration: 0.15
+  DamageAcceleration: 0.2
   MissileObject: {fileID: 1643858568424458, guid: 7687e9d5dddceb74087270ddef865e08,
     type: 2}
 --- !u!4 &752496334
@@ -517,7 +518,7 @@ Transform:
   m_GameObject: {fileID: 1086132158}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 500, y: 250, z: 1}
+  m_LocalScale: {x: 400, y: 250, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
@@ -834,6 +835,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdd100693f1035f4797f144a9f40aa32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  WallHP: 1000
+  DamagePerStrike: 1
 --- !u!1 &1728509463
 GameObject:
   m_ObjectHideFlags: 0
@@ -975,4 +978,3 @@ MonoBehaviour:
   MaxTurrets: 5
   TurretPrefab: {fileID: 1495117250726080, guid: 3c360deacd4d1be4ba32b86b5e68bae1,
     type: 2}
-  CanPlaceTurrets: 1

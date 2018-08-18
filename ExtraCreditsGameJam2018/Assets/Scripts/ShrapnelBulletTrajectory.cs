@@ -11,8 +11,8 @@ public class ShrapnelBulletTrajectory : MonoBehaviour {
     private float _ageInSeconds = 0.0f;
 
 	// Use this for initialization
-	void Start () {
-        Direction = new Vector2(0, 0);
+	void Awake () {
+        Direction = Random.insideUnitCircle;
 	}
 	
 	// Update is called once per frame
@@ -26,6 +26,12 @@ public class ShrapnelBulletTrajectory : MonoBehaviour {
         {
             Vector3 shiftPosition = new Vector3((Direction.x * SpeedPerFrame * Time.deltaTime), (Direction.y * SpeedPerFrame * Time.deltaTime), 0);
             gameObject.transform.position += shiftPosition;
+
+            //Safeguard against offscreen explosions
+            if(gameObject.transform.position.x <= -8)
+            {
+                Destroy(gameObject);
+            }
         }
 		
 	}

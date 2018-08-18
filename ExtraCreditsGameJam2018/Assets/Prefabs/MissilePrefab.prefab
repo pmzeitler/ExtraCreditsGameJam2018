@@ -101,6 +101,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1abac62d68d2f6c4aabd23336eedadb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ShrapnelBullet: {fileID: 1148124716687018, guid: 54729daf83c2b3b4c8f948e918d62d99,
+    type: 2}
+  ShrapnelPerBurst: 6
+  DamageValue: 1
   SpeedPerFrame: 9
 --- !u!212 &212701939035781186
 SpriteRenderer:

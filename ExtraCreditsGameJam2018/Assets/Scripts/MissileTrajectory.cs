@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class MissileTrajectory : MonoBehaviour {
 
+    public GameObject ShrapnelBullet;
+    public int ShrapnelPerBurst = 6;
+
+    public float DamageValue = 1.0f;
+
     public Vector2 InitialPosition
     {
         get; set;
@@ -29,9 +34,23 @@ public class MissileTrajectory : MonoBehaviour {
         //Debug.Log("Exiting object named " + exitingObject.name + "...");
         if (enteringObject.tag == "Bullet")
         {
-            Debug.Log("Missile shot down");
+            float damageSustained = enteringObject.GetComponent<BulletDamage>().Value;
+            DamageValue -= damageSustained;
             Destroy(enteringObject);
-            Destroy(gameObject);
+            if (DamageValue <= 0.0f)
+            {
+                //Debug.Log("Missile shot down");
+                Destroy(gameObject);
+                if (enteringObject.GetComponent<TurretBulletTrajectory>() != null)
+                {
+                    enteringObject.GetComponent<TurretBulletTrajectory>().firingTurret.GetComponent<TurretFireControl>().RewardTurret();
+                }
+                for (int i = 0; i < ShrapnelPerBurst; i++)
+                {
+                    GameObject shrapnel = Instantiate(ShrapnelBullet, gameObject.transform.position, Quaternion.identity);
+                    shrapnel.GetComponent<BulletDamage>().Value = (FindObjectOfType<MissileSpawner>().TrueDamageValue / ((float)(ShrapnelPerBurst + 1)));
+                }
+            }
         }
     }
 }
