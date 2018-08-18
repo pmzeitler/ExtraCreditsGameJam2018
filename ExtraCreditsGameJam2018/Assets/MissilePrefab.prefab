@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212701939035781186}
   - component: {fileID: 60706778265009912}
   - component: {fileID: 50538141719228854}
+  - component: {fileID: 114932857019525580}
   m_Layer: 0
   m_Name: MissilePrefab
   m_TagString: Missile
@@ -89,6 +90,18 @@ PolygonCollider2D:
     - - {x: 0, y: 0.02}
       - {x: -0.017320508, y: -0.010000001}
       - {x: 0.017320508, y: -0.009999998}
+--- !u!114 &114932857019525580
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1643858568424458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1abac62d68d2f6c4aabd23336eedadb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SpeedPerFrame: 3
 --- !u!212 &212701939035781186
 SpriteRenderer:
   m_ObjectHideFlags: 1
