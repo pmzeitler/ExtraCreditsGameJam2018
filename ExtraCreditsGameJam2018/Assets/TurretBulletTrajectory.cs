@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MissileTrajectory : MonoBehaviour {
+public class TurretBulletTrajectory : MonoBehaviour {
 
     public Vector2 InitialPosition
     {
@@ -19,7 +19,7 @@ public class MissileTrajectory : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        gameObject.transform.position += new Vector3(SpeedPerFrame, 0, 0);
+        gameObject.transform.position += new Vector3(0, SpeedPerFrame, 0);
 		
 	}
 }

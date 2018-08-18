@@ -10,8 +10,8 @@ public class BuildingCollisionHandler : MonoBehaviour {
 
         if (collision.collider.gameObject.tag == "Missile")
         {
-            Debug.Log("Destroying ze missile");
             Destroy(collision.collider.gameObject);
+            //Debug.Log("The wall is taking damage!");
         }
     }
 
