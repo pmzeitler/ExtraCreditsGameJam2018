@@ -24,12 +24,12 @@ public class PlayerController : MonoBehaviour {
         Vector3 movement = new Vector3(0, 0, 0);
 		if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
-            movement.x = (-1 * speedPerFrame);
+            movement.x = (-1 * speedPerFrame * Time.deltaTime);
         }
         else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
 
-            movement.x = (speedPerFrame);
+            movement.x = (speedPerFrame * Time.deltaTime);
         }
         gameObject.transform.position += movement;
 

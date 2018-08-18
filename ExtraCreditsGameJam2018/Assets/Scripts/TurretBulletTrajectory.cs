@@ -3,12 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class TurretBulletTrajectory : MonoBehaviour {
-
-    public Vector2 InitialPosition
-    {
-        get; set;
-    }
-
     public float SpeedPerFrame = 3.0f;
 
 	// Use this for initialization
@@ -19,7 +13,7 @@ public class TurretBulletTrajectory : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        gameObject.transform.position += new Vector3(0, SpeedPerFrame, 0);
+        gameObject.transform.position += new Vector3(0, SpeedPerFrame * Time.deltaTime, 0);
 		
 	}
 }
