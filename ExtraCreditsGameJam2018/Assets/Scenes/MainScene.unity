@@ -402,7 +402,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f879410c5ec78946bf1b3d8806d22f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StartingDelaySeconds: 10
+  StartingDelaySeconds: 3
   MissilesPerSecond: 3
   MissileAcceleration: 0.15
   DamageAcceleration: 0.2

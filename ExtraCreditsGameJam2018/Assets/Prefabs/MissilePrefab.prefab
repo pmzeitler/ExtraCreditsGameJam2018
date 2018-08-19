@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 60706778265009912}
   - component: {fileID: 50538141719228854}
   - component: {fileID: 114932857019525580}
+  - component: {fileID: 95160296633521366}
   m_Layer: 0
   m_Name: MissilePrefab
   m_TagString: Missile
@@ -36,13 +37,13 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1643858568424458}
-  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -9.147559, y: 2.1048207, z: 0}
-  m_LocalScale: {x: 25, y: 25, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -6.1935267, y: 0.2424529, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &50538141719228854
 Rigidbody2D:
   serializedVersion: 4
@@ -79,7 +80,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.04, y: 0.04}
+    oldSize: {x: 1.25, y: 1}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -87,9 +88,35 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0, y: 0.02}
-      - {x: -0.017320508, y: -0.010000001}
-      - {x: 0.017320508, y: -0.009999998}
+    - - {x: 0.5649066, y: 0.08039881}
+      - {x: 0.47327995, y: 0.16216554}
+      - {x: 0.13471413, y: 0.16071974}
+      - {x: -0.054397583, y: 0.34916526}
+      - {x: -0.21972704, y: 0.35534394}
+      - {x: -0.21983433, y: -0.36883986}
+      - {x: -0.064169884, y: -0.3630701}
+      - {x: 0.119423866, y: -0.17827182}
+      - {x: 0.46586132, y: -0.16829173}
+      - {x: 0.5606332, y: -0.07399027}
+      - {x: 0.5928855, y: -0.020658642}
+--- !u!95 &95160296633521366
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1643858568424458}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3549a3239b2de934f8ac522ab470f5ca, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114932857019525580
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -141,8 +168,8 @@ SpriteRenderer:
   m_SortingLayerID: 288726177
   m_SortingLayer: 2
   m_SortingOrder: 30
-  m_Sprite: {fileID: 21300000, guid: 052371b3320c3dd4aa5f15191d2f4822, type: 3}
-  m_Color: {r: 1, g: 0.98480475, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: dd78fcb0b73a19e4c834e212f40b04ab, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
